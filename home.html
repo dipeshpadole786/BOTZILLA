@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoding Doctor Speak - Your Personal Health Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+
+        .prescription-card {
+            transition: all 0.3s ease;
+        }
+
+        .prescription-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .chatbot-container {
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-container:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-stethoscope text-2xl"></i>
+                    <span class="text-xl font-bold">Decoding Doctor Speak</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#features" class="hover:text-gray-200 transition">Features</a>
+                    <a href="#how-it-works" class="hover:text-gray-200 transition">How It Works</a>
+                    <a href="#testimonials" class="hover:text-gray-200 transition">Testimonials</a>
+                    <a href="#contact" class="hover:text-gray-200 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition">Login</button>
+                    <button
+                        class="hidden md:block bg-blue-800 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-900 transition">Sign
+                        Up</button>
+                    <button class="md:hidden text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Personal Health Companion</h1>
+                <p class="text-xl mb-8">Turning complex medical language into clear, actionable guidance.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button
+                        class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition flex items-center justify-center">
+                        <i class="fas fa-download mr-2"></i> Get the App
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition flex items-center justify-center">
+                        <i class="fas fa-play mr-2"></i> Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png" alt="Doctor and patient"
+                        class="w-64 h-64 md:w-80 md:h-80 object-contain floating-button">
+                    <div class="absolute -bottom-5 -right-5 bg-white text-blue-600 p-3 rounded-full shadow-lg">
+                        <i class="fas fa-comment-medical text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Simplifying Healthcare For You</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md prescription-card">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-prescription-bottle-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Prescription Decoder</h3>
+                    <p class="text-gray-600">Upload your prescriptions or discharge summaries and get easy-to-understand
+                        explanations of medicines, usage, and side effects.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md prescription-card">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Health Assistant Chatbot</h3>
+                    <p class="text-gray-600">Our interactive chatbot answers your health-related queries and guides you
+                        through treatment plans step by step.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md prescription-card">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-bell text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Smart Reminders</h3>
+                    <p class="text-gray-600">Never miss a dose or appointment with our alarm-based notifications and
+                        timely reminders.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md prescription-card">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-map-marker-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Hospital Locator</h3>
+                    <p class="text-gray-600">Find nearby hospitals and check medicine availability at local pharmacies
+                        with just a few taps.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md prescription-card">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-shopping-cart text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Medicine Shopping</h3>
+                    <p class="text-gray-600">Order your prescribed medicines easily through our user-friendly shopping
+                        interface.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md prescription-card">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-user-md text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Premium Support</h3>
+                    <p class="text-gray-600">Upgrade for direct calling with healthcare providers and personalized
+                        medical guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">How It Works</h2>
+
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991473.png" alt="Upload prescription"
+                            class="w-48 h-48 object-contain">
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="flex items-start mb-6">
+                        <div
+                            class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Upload Your Prescription</h3>
+                            <p class="text-gray-600">Simply take a photo of your prescription or upload the document
+                                from your device.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start mb-6">
+                        <div
+                            class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Get Plain-Language Summary</h3>
+                            <p class="text-gray-600">Our system analyzes your prescription and provides an
+                                easy-to-understand explanation of your medicines, dosage, and treatment plan.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div
+                            class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Stay On Track</h3>
+                            <p class="text-gray-600">Set up reminders, ask questions to our chatbot, and manage your
+                                healthcare journey all in one place.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Demo Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Try Our Health Assistant</h2>
+
+            <div class="max-w-3xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden chatbot-container">
+                <div class="gradient-bg text-white p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-3">
+                            <i class="fas fa-robot text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Health Assistant</h3>
+                            <p class="text-xs opacity-80">Online</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 h-64 overflow-y-auto" id="chat-messages">
+                    <div class="flex mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-robot text-blue-600 text-sm"></i>
+                        </div>
+                        <div class="bg-gray-200 rounded-lg p-3">
+                            <p class="text-gray-800">Hello! I'm your Health Assistant. How can I help you today? You can
+                                ask me about your medicines, treatment plans, or any health-related questions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t p-4">
+                    <div class="flex">
+                        <input type="text" id="chat-input" placeholder="Type your health question here..."
+                            class="flex-grow border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="send-btn"
+                            class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Users Say</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"This app has been a lifesaver! I finally understand what all those medical
+                        terms mean and when to take my medications. The reminders ensure I never miss a dose."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As someone caring for elderly parents, this app has reduced so much
+                        stress. The chatbot answers our questions instantly, and the hospital locator is incredibly
+                        useful."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Priya Patel</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The prescription decoder is amazing! It explains everything in simple
+                        terms and even warns about potential side effects. I feel much more confident about my treatment
+                        now."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Take Control of Your Healthcare?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of users who are making healthcare simpler and more
+                accessible every day.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button
+                    class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                    Download Now
+                </button>
+                <button
+                    class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+
+                        <div class="flex items-start mb-6">
+                            <div class="text-blue-600 mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Email Us</h4>
+                                <p class="text-gray-600">help@decodingdoctorspeak.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="text-blue-600 mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Call Us</h4>
+                                <p class="text-gray-600">+1 (800) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Visit Us</h4>
+                                <p class="text-gray-600">123 Healthcare Ave, Suite 100<br>San Francisco, CA 94107</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-6">Send Us a Message</h3>
+
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-stethoscope text-2xl"></i>
+                        <span class="text-xl font-bold">Decoding Doctor Speak</span>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">Making healthcare communication as easy as talking to a friend.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Help Center</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Decoding Doctor Speak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-6">
+        <button
+            class="gradient-bg text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition">
+            <i class="fas fa-comment-medical text-xl"></i>
+        </button>
+    </div>
+
+    <script>
+        // Simple chatbot functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const chatInput = document.getElementById('chat-input');
+            const sendBtn = document.getElementById('send-btn');
+            const chatMessages = document.getElementById('chat-messages');
+
+            sendBtn.addEventListener('click', sendMessage);
+            chatInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    // Add user message
+                    addMessage(message, 'user');
+                    chatInput.value = '';
+
+                    // Simulate bot response after a short delay
+                    setTimeout(() => {
+                        const botResponse = getBotResponse(message);
+                        addMessage(botResponse, 'bot');
+                    }, 1000);
+                }
+            }
+
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = flex mb - 4 ${ sender === 'user' ? 'justify-end' : '' };
+
+                if (sender === 'user') {
+                    messageDiv.innerHTML = `
+                        <div class="bg-blue-600 text-white rounded-lg p-3 max-w-xs md:max-w-md">
+                            <p>${text}</p>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center ml-3 flex-shrink-0">
+                            <i class="fas fa-user text-white text-sm"></i>
+                        </div>
+                    `;
+                } else {
+                    messageDiv.innerHTML = `
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-robot text-blue-600 text-sm"></i>
+                        </div>
+                        <div class="bg-gray-200 rounded-lg p-3 max-w-xs md:max-w-md">
+                            <p class="text-gray-800">${text}</p>
+                        </div>
+                    `;
+                }
+
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function getBotResponse(userMessage) {
+                const lowerMessage = userMessage.toLowerCase();
+
+                if (lowerMessage.includes('medicine') || lowerMessage.includes('medication')) {
+                    return "I can help explain your medications. Please upload your prescription or tell me the name of the medicine you're asking about.";
+                } else if (lowerMessage.includes('side effect') || lowerMessage.includes('reaction')) {
+                    return "Medicines can sometimes cause side effects. Could you tell me which medicine you're experiencing side effects from? I can provide more specific information.";
+                } else if (lowerMessage.includes('appointment') || lowerMessage.includes('doctor')) {
+                    return "You can schedule or check your upcoming appointments in the 'Appointments' section of the app. Would you like me to remind you about an upcoming appointment?";
+                } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                    return "Hello! I'm your Health Assistant. How can I help you with your healthcare questions today?";
+                } else {
+                    return "I'm here to help with your healthcare questions. You can ask me about your medicines, treatment plans, or any health concerns you might have. For more specific answers, try mentioning the medicine name or your symptom.";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
